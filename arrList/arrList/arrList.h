@@ -77,6 +77,7 @@ bool arrList<T>::apendArr(const T value)   //在表尾添加元素V
 	}
 	_aList[_curLen] = value;
 	_curLen++;
+	return true;
 }
 template <typename T>
 bool arrList<T>::insertArr(const int p, const T value)   //插入元素
@@ -173,9 +174,29 @@ template <typename T>
 void arrList<T>::showArr()
 {
 	cout << "showArr()" << endl;
-	_position = 0;
-	while (_position < _curLen) {
-		cout << _aList[_position++] << " ";
+	for (int i = 0; i < _curLen; i++)
+	{
+		cout << _aList[i] << " ";
 	}
+#if 0
+	int i = 0;
+	while (i < _curLen) {
+		cout << _aList[i] << " ";
+	}
+#endif
 	cout << endl;
 }
+#if 0
+template <>
+bool arrList<char *>::apendArr(char * const value)   //在表尾添加元素V
+{
+	cout << "apendArr(const T value)" << endl;
+	if (_curLen >= _maxLen) {
+		cout << "This list is overflow" << endl;
+		return false;
+	}
+	_aList[_curLen] = value;
+	_curLen++;
+	return true;
+}
+#endif

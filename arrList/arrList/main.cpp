@@ -43,5 +43,13 @@ int main()
 		array3.apendArr(tmp);
 	}
 	array3.showArr();
+	char *strtmp = new char(10);
+	memcpy(strtmp, "hi", 3);
+	arrList<char *> array4(10);
+	for (int i = 0; i < 10; i++)
+	{
+		array4.apendArr(strtmp);
+	}
+	array4.showArr();
 
 }
