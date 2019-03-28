@@ -3,6 +3,14 @@
 #include <iostream>
 using namespace std;
 
+/*
+插入元素的时候
+1、线性表需要判断表是否满
+2、插入的位置是否有效
+删除元素：
+1、表是否为空
+2、删除的元素是否有效
+*/
 template <typename T>
 class arrList
 {
@@ -11,13 +19,13 @@ public:
 	~arrList();
 	void clearArr();
 	int lengthArr();
-	bool fullArr();
-	bool apendArr(const T value);
-	bool insertArr(const int p, const T value);
-	bool deleteArr(const int p);
-	bool setValueArr(const int p, const T value);
-	bool getValueArr(const int p, T& value);
-	bool getPosArr(int &p, const T value);
+	bool fullArr();        //判断是否满
+	bool apendArr(const T value);    //尾部添加元素
+	bool insertArr(const int p, const T value);   //插入元素
+	bool deleteArr(const int p);      //删除元素
+	bool setValueArr(const int p, const T value);    //修改某个位置的元素
+	bool getValueArr(const int p, T& value);       //获取某个位置的元素
+	bool getPosArr(int &p, const T value);      //查找是否有这个值在表中
 	void showArr();
 private:
 	int _curLen;        //表实例当前长度
