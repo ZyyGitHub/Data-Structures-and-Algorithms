@@ -1,5 +1,6 @@
 #include "queue.h"
 #include <queue>
+#include <vector>
 
 
 int main()

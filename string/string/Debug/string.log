@@ -1,0 +1,6 @@
+﻿  string.cpp
+e:\git\data-structures-and-algorithms\string\string\string.cpp(56): warning C4018: “<”: 有符号/无符号不匹配
+e:\git\data-structures-and-algorithms\string\string\string.cpp(66): warning C4018: “>=”: 有符号/无符号不匹配
+e:\git\data-structures-and-algorithms\string\string\string.cpp(75): warning C4018: “<=”: 有符号/无符号不匹配
+e:\git\data-structures-and-algorithms\string\string\string.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
+  string.vcxproj -> E:\Git\Data-Structures-and-Algorithms\string\Debug\string.exe

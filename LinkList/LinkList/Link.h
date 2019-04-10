@@ -218,7 +218,19 @@ void Link<T>::showLink()
 
 template <typename T>
 void Link<T>::reserveLink() {
-	Node<T> *cur = _phead;
+	Node<T> *pNode = _phead;
+	Node<T> *pPrev = NULL;
+	Node<T> *pReverseList = NULL;
+	while (pNode != NULL) {
+		Node<T> *next = pNode->_pnext;
+		if (next == NULL) {
+			pReverseList = pNode;
+		}
+		pNode->_pnext = pPrev£»
+		pPrev = pNode;
+		pNode = next;
+	}
+	_phead->_pnext = pReverseList;
 }
 
 template <typename T>
